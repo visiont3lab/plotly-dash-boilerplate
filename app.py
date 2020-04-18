@@ -8,7 +8,6 @@ import dash_html_components as html
 import dash_core_components as dcc
 import plotly.graph_objects as go
 import pandas as pd
-from my_lib import *
 import time
 
 def get_nomi_regioni(df):
