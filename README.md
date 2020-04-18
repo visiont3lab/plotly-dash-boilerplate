@@ -3,6 +3,9 @@
 Cliccare questo link per provare e modicare la dashboard 
 [![Run on Repl.it](https://repl.it/badge/github/visiont3lab/plotly-dash-boilerplate)](https://repl.it/github/visiont3lab/plotly-dash-boilerplate)
 
+**Importante** 
+> Per generare grafic è possibile utilizzare [Chart Studio Plotly](https://plotly.com/chart-studio/) (Tool Web Grafico per creare figure senza riga di codice). Le figure poi possono essere importate facilmente nell'applicazione in quanto dash usa json per scambiare file tra frontend e backend.
+
 Una dashorboad più complessa basata su questo esempio è la [covid19-dash-plotly](https://github.com/visiont3lab/covid19-dash-plotly)
 
 ## Spiegazione 
@@ -34,4 +37,4 @@ python app.py
 * [Dash Gallery examples](https://dash-gallery.plotly.host/Portal/)
 * [Plotly Express](https://plotly.com/python/plotly-express/)
 * [Plotly](https://plotly.com/python/)
-
+* [Chart Studio Plotly](https://plotly.com/chart-studio/)
