@@ -11,6 +11,44 @@ import pandas as pd
 from my_lib import *
 import time
 
+def get_nomi_regioni(df):
+    nomi_regioni = list(df["denominazione_regione"].unique())
+    nomi_regioni.sort()
+    return nomi_regioni
+
+def get_nomi_province(df, regione=None):
+    
+    # Nomi delle prime num provincie per numero di casi 
+    ultima_data_aggiornamento = list(df.tail(1)["data"])[0]
+    # Dataframe regione scelta e ultima data aggiornamento
+    el = 'In fase di definizione/aggiornamento'
+    if regione==None:
+        temp = df[(df["data"]==ultima_data_aggiornamento) & (df["denominazione_provincia"]!=el)] 
+    else:
+        temp = df[(df["denominazione_regione"]==regione) & (df["data"]==ultima_data_aggiornamento) & (df["denominazione_provincia"]!=el)]
+    # Ordina dal più grande al più piccolo
+    temp.sort_values(by="totale_casi",ascending=False, inplace=True)
+    nomi_province = list(temp["denominazione_provincia"]) #[0:num])
+
+    # Nomi pronvicie 
+    #nomi_province = list(df["denominazione_provincia"].unique())
+    return nomi_province
+
+def get_data_provincia(df, provincia="Bologna", regione="Emilia-Romagna"):
+    # Estrai i dati relativi alla regione=regione e provincia=pronvincia
+    df_choice = df[ (df["denominazione_regione"]==regione) & (df["denominazione_provincia"]==provincia)]
+    df_fin = df_choice[["data", "denominazione_regione","denominazione_provincia","lat","long","totale_casi"]]
+    return df_fin
+
+def get_info_data(df):
+    # Usiamo dataset andamento nazionale
+    totale_positivi  = df.tail(1)["totale_positivi"].values[0]
+    dimessi_guariti  = df.tail(1)["dimessi_guariti"].values[0]
+    deceduti  = df.tail(1)["deceduti"].values[0]
+    nuovi_positivi  = df.tail(1)["nuovi_positivi"].values[0]
+    totale_casi  = df.tail(1)["totale_casi"].values[0]
+    return totale_positivi,dimessi_guariti,deceduti,nuovi_positivi,totale_casi
+    
 def plot_regioni(df,lista_regioni_to_plot,lista_keys_to_plot=None, plot_style=None ):
     # lista_input è una lista che contiene i nomi delle regioni da plottare
     # plot_number numero di grafici da plottare All o 10
@@ -356,4 +394,4 @@ def update_fig_reg(checklist_value, plot_style_value, dropdown_regioni_value):
 
 
 if __name__ == '__main__':
-    app.run_server() #debug=True, host="0.0.0.0", port=8800)
+    app.run_server(host="0.0.0.0") #debug=True, host="0.0.0.0", port=8800)
