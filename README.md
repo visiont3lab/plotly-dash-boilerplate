@@ -3,6 +3,8 @@
 Cliccare questo link per provare e modicare la dashboard 
 [![Run on Repl.it](https://repl.it/badge/github/visiont3lab/plotly-dash-boilerplate)](https://repl.it/github/visiont3lab/plotly-dash-boilerplate)
 
+Una dashorboad più complessa basata su questo esempio è la [covid19-dash-plotly](https://github.com/visiont3lab/covid19-dash-plotly)
+
 ## Spiegazione 
 Dash  è un react (frontend) , Dash (flask based python) framework che permette di costruire dashboard interattive principalmente usando codice python e la libreria plotly.
 
