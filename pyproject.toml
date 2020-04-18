@@ -1,0 +1,8 @@
+[tool]
+[tool.poetry]
+authors = ["visiont3lab@gmail.com"]
+name = "root"
+version = "0.0.0"
+[tool.poetry.dependencies]
+dash=="1.9.1"
+pandas=="1.0.3"
