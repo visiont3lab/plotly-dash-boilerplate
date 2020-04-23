@@ -1,4 +1,4 @@
-.js-plotly-plot .plotly .modebar {
+js-plotly-plot .plotly .modebar {
     right: 0%;
     /*padding-top: 5%;
     margin-right: 3.5%;*/
@@ -12,28 +12,57 @@
 .columns {
     margin: 1% !important;
 }
+
   
 .pretty_container {
     border-radius: 5px;
-    background-color: #22252b;
+    background-color: #0E1428; /*#22252b;*/
+    margin: 10px !important;
     /*margin: 10px !important;*/
-    /*margin: 10px !important;*/
-    padding: 15px;
+    padding: 35px;
     position: relative;
     /*box-shadow: 2px 2px 2px lightgray;*/
 }
 
+.center {
+    /* Class to center an image*/
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    /*width: 50%;*/
+}
+
+.three_modified { width: 27.33% }
+/*.four {width: 33.33% !important;}*/
+
+.four_modified { width: 30.32% }
+.four_modified1 { width: 32.99% }
+.eigth_modified { width: 67.32% }
+
 @media only screen and (max-width: 1400px) {
-    .one, .two, .three, .five, .six,
-    .seven, .nine, .ten, .eleven, .twelve  {width: 98% !important;}
-    .eight {width: 60% !important;}
-    .four {width: 25% !important;}
+    body {
+        margin : 1% 1% 1% 1% !important;
+    }
+    .one, .two, .three .four, .five, .six,
+    .seven, .nine, .ten, .eleven, .twelve , .eigth,
+    .four_modified, .eigth_modified  {width: 98% !important;}
+
+    .four_modified1 {width: 98% !important;}
 }
   
 #radio-buttom-province, #radio-buttom-plot-style{
     padding-top: 40px;
     text-align: center;
     background-color: rgb(33, 33, 33);/* #22252b; */
+}
+
+/* Overriding React Select background before selecting item */
+div .Select.is-focused > .Select-control {
+    background: rgb(33, 33, 33);
+}
+/* Overriding React Select background after selecting item */
+div .Select.is-focused:not(.is-open) > .Select-control {
+    background: rgb(33, 33, 33);
 }
 
 Select, .Select div, .Select input, .Select span {
@@ -52,7 +81,7 @@ Select, .Select div, .Select input, .Select span {
 
 #main{
     position: relative;
-    background-color: #22252b; /* rgb(61, 5, 5);*/
+    /*background-color: #8699B9;*/ 
 }
 
 .flex-display {
@@ -62,7 +91,7 @@ Select, .Select div, .Select input, .Select span {
 
 .mini_container {
     border-radius: 5px;
-    background-color: #22252b;
+    background-color: #0E1428;
     margin: 10px;
     padding: 15px;
     position: relative;
@@ -71,7 +100,7 @@ Select, .Select div, .Select input, .Select span {
 
 .info_container {
     border-radius: 5px;
-    background-color: #22252b;
+    background-color: #0E1428; 
     /*margin: 10px 10px 10px 10px !important; */
     padding: 15px;
     position: relative;
@@ -96,29 +125,24 @@ Select, .Select div, .Select input, .Select span {
     overflow: hidden;
     
 }
-
 .Select-control, .Select-input>input {
     width: 100%;
     cursor: default;
     outline: 0;
 }
-
 .Select, .Select-control {
     position: relative;
 }
-
 .Select-menu-outer  div{
     background-color:red; 
     box-shadow: red;
 }
-
 .is-open>.Select-control {
     background-color: #22252b; 
     border-radius: 4px;
     border: 1px solid #ccc;
     color:white;
 }
-
 .Select-control div{
     background-color: #22252b; 
 }
@@ -126,10 +150,8 @@ Select, .Select div, .Select input, .Select span {
     background-color:rgb(33, 33, 33); 
     box-shadow: rgb(33, 33, 33);
 }
-
 .Select-menu-outer:focus{
     background-color:rgb(33, 33, 33); 
     box-shadow: rgb(33, 33, 33);
 }
 */
-

@@ -5,6 +5,8 @@ name = "root"
 version = "0.0.0"
 [tool.poetry.dependencies]
 pandas = "==1.0.3"
+seaborn = "==0.10.0" 
+matplotlib= "==3.2.1" 
 dash = "^1.11"
 dash-core-components = "^1.9"
 dash-html-components = "^1.0"

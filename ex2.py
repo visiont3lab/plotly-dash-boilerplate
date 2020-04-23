@@ -151,20 +151,44 @@ server = app.server
 
 app.layout =  html.Div([
         html.Div([
-            dcc.Markdown(
-                write,
-            highlight_config=dict(theme="dark")),
-        ], className="pretty_container"),
+            
+            html.Div([
+                dcc.Markdown(
+                    write,
+                highlight_config=dict(theme="dark")),
+            ], className="four_modified columns pretty_container"), #className="four columns pretty_container"),
+            
+            html.Div([
+                html.H3("Analisi Nazionale"),
+                html.P("Analisi Nazionale basata sul dataset covid19 fornito dalla protezione civile"),
+            ], className="four_modified1 columns  pretty_container"),
+
+            html.Div([
+                html.H3("Analisi Nazionale"),
+                html.P("Analisi Nazionale basata sul dataset covid19 fornito dalla protezione civile"),
+            ], className="four_modified1 columns  pretty_container"),
+        
+            html.Div([
+                html.H3("Analisi Nazionale"),
+                html.P("Analisi Nazionale basata sul dataset covid19 fornito dalla protezione civile"),
+                html.Img(src='/assets/images/fig_seaborn.png', className="center", id="fig-seaborn"),
+            ], className="eigth_modified columns pretty_container"), # className="eight columns pretty_container"),
+     
+        ],className="row"),
+        
         html.Div([
-          html.Img(src='/assets/images/fig_seaborn.png', className="center", id="fig-seaborn"),
-        ], className="pretty_container"),
-        html.Div([
-            html.H3("Analisi Nazionale"),
-            html.P("Analisi Nazionale basata sul dataset covid19 fornito dalla protezione civile"),
-        ], className="pretty_container"),
-        html.Div([
-            dcc.Graph(id='fig-plotly', figure=fig_plotly)
-        ], className="pretty_container"),
+            
+            html.Div([
+                html.H3("Analisi Nazionale"),
+                html.P("Analisi Nazionale basata sul dataset covid19 fornito dalla protezione civile"),
+            ], className="four_modified columns pretty_container"),
+            
+            html.Div([
+                dcc.Graph(id='fig-plotly', figure=fig_plotly)
+            ], className="eigth_modified columns pretty_container"),
+        
+        ]),
+
     ],id="main")
 
 
