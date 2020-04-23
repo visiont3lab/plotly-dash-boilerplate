@@ -2,7 +2,7 @@
 body {
     /*padding: 20px 300px 0px 300px;*/
     /*margin : 1%; */
-    margin : 10px 100px 10px  100px;  /* top right bottom left */
+    margin : 10px 200px 10px  200px;  /* top right bottom left */
     /*padding : 0px 0px 0px 0px;*/
     background-color: #1a1c23;
     color: white; /* text color */
@@ -14,3 +14,4 @@ img {
     max-width: 100%;
     height: auto; /*600px*/
 }
+ 
